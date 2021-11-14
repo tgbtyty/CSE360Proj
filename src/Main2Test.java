@@ -16,6 +16,10 @@ public class Main2Test {
         ArrayList<Entry> entries = new ArrayList<Entry>();
         Scanner entryScan = new Scanner(System.in);
 
+        FileInputStream fout = new FileInputStream("entrydata.ser");
+        
+
+
 
         while(Cont) {
             entryScan.nextLine();
@@ -47,6 +51,10 @@ public class Main2Test {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
+
+
         System.out.println("These are your Entries:\n\n");
         for (int i = 0; i < entries.size(); i++){
             System.out.println(entries.get(i).name + "\n");
@@ -65,4 +73,6 @@ class Entry implements Serializable {
         age = b;
     }
 
+
 }
+
